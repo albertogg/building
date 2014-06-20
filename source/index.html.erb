@@ -3,8 +3,15 @@ title: Welcome to Middleman
 ---
 
 <div class="welcome">
-  <h1>Middleman is Watching</h1>
-  <p class="doc">
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p><!-- .doc -->
+  <h1>
+    <a href="/">
+      <span>Header</span>
+    </a>
+  </h1>
+
+  <ul>
+    <% data.link.links.each do |d| %>
+      <li><%= link_to d.name, d.url %></li>
+    <% end %>
+  </ul>
 </div><!-- .welcome -->
